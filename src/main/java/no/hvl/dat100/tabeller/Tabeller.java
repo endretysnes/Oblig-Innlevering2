@@ -51,15 +51,23 @@ public class Tabeller {
 	// f)
 	public static int[] reverser(int[] tabell) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden reverser ikke implementert");
+        int[] nyTabell = new int[tabell.length];
+
+        for(int i = 0; i < tabell.length; i++){
+            nyTabell[i] = tabell[tabell.length - 1 - i];
+        }
+        return nyTabell;
 	}
 
 	// g)
 	public static boolean erSortert(int[] tabell) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden erSortert ikke implementert");
+        for (int i = 1; i < tabell.length; i++) {
+            if(tabell[i] < tabell[i - 1]){
+                return false;
+            }
+        }
+        return true;
 	}
 
 	// h)
