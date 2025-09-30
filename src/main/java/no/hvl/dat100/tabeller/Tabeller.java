@@ -77,5 +77,6 @@ public class Tabeller {
 		throw new UnsupportedOperationException("Metoden settSammen ikke implementert");
 
         // HEI
-	}
+    }
+
 }
