@@ -76,5 +76,6 @@ public class Tabeller {
 		// TODO
 		throw new UnsupportedOperationException("Metoden settSammen ikke implementert");
 
+        // HEI
 	}
 }
