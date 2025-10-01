@@ -8,7 +8,7 @@ public class Matriser {
 	// a)
         for(int rad[] : matrise) {
             for(int kolonne : rad) {
-                System.out.println(kolonne + " ");
+                System.out.print(kolonne + " ");
             }
 			System.out.println();
         }
