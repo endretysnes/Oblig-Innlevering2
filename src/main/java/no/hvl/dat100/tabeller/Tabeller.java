@@ -12,9 +12,14 @@ public class Tabeller {
 
 	// b)
 	public static String tilStreng(int[] tabell) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden tilStreng ikke implementert");
+		// "returnere tabell av string fra tabell av heltall"
+		String strengSvar = "[" + tabell[0];
+		
+		for (int i = 1; i < tabell.length; i++) {
+			strengSvar += "," + tabell[i];
+		}
+		strengSvar += "]";
+		return strengSvar;
 	}
 
 	// c)
