@@ -4,7 +4,8 @@ public class Matriser {
 
 	// a)
 	public static void skrivUt(int[][] matrise) {
-
+	
+	// a)
         for(int rad[] : matrise) {
             for(int kolonne : rad) {
                 System.out.println(kolonne + " ");
@@ -15,10 +16,25 @@ public class Matriser {
 
 	// b)
 	public static String tilStreng(int[][] matrise) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden tilStreng ikke implementert");
+		String pakke = "{";
 		
+		for (int i = 0; i < matrise.length; i++) {
+			int[] rad = matrise[i];
+			pakke += "{";
+			for (int j = 0; j < rad.length; j++) {
+				pakke += rad[j];
+				if (j < rad.length - 1) {
+					pakke += ",";
+				}
+			}
+			pakke += "}";
+			if (i < matrise.length - 1) {
+				pakke += ",";
+			}
+		}
+		
+		pakke += "}";
+		return pakke;
 	}
 
 	// c)
