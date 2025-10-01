@@ -4,8 +4,7 @@ public class Matriser {
 
 	// a)
 	public static void skrivUt(int[][] matrise) {
-	
-	// a)
+		
         for(int rad[] : matrise) {
             for(int kolonne : rad) {
                 System.out.print(kolonne + " ");
@@ -16,25 +15,18 @@ public class Matriser {
 
 	// b)
 	public static String tilStreng(int[][] matrise) {
-		String pakke = "{";
+		String svar = "";
 		
-		for (int i = 0; i < matrise.length; i++) {
-			int[] rad = matrise[i];
-			pakke += "{";
+		for (int[] rad : matrise) {
 			for (int j = 0; j < rad.length; j++) {
-				pakke += rad[j];
+				svar += rad[j];
 				if (j < rad.length - 1) {
-					pakke += ",";
+					svar += " ";
 				}
 			}
-			pakke += "}";
-			if (i < matrise.length - 1) {
-				pakke += ",";
-			}
+			svar += "\n";
 		}
-		
-		pakke += "}";
-		return pakke;
+		return svar;
 	}
 
 	// c)
