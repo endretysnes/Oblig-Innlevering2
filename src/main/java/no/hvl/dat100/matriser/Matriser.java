@@ -4,20 +4,29 @@ public class Matriser {
 
 	// a)
 	public static void skrivUt(int[][] matrise) {
-
-        for(int rad[] : matrise){
-            for(int kolonne : rad){
-                System.out.println(kolonne);
+		
+        for(int rad[] : matrise) {
+            for(int kolonne : rad) {
+                System.out.print(kolonne + " ");
             }
+			System.out.println();
         }
 	}
 
 	// b)
 	public static String tilStreng(int[][] matrise) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden tilStreng ikke implementert");
+		String svar = "";
 		
+		for (int[] rad : matrise) {
+			for (int j = 0; j < rad.length; j++) {
+				svar += rad[j];
+				if (j < rad.length - 1) {
+					svar += " ";
+				}
+			}
+			svar += "\n";
+		}
+		return svar;
 	}
 
 	// c)
@@ -58,9 +67,37 @@ public class Matriser {
 	// e)
 	public static int[][] speile(int[][] matrise) {
 
-		// TODO
+		public static void skrivUt(int[][] matrise) {
+		
+        for(int rad[] : matrise) {
+            for(int kolonne : rad) {
+                System.out.print(kolonne + " ");
+            }
+			System.out.println();
+        }
+	}
+	public static int[][] speile(int[][] matrise) {
+		
+		int rad = matrise.length;
+		int kol = matrise[0].length;
+		int[][] speil = new int[kol][rad];
 
-		throw new UnsupportedOperationException("Metoden speile ikke implementert");
+		for (int i = 0; i < rad; i++) {
+			for (int j = 0; j < kol; j++) {
+				speil[j][i] = matrise[i][j];
+			}
+		}
+		return speil;
+	}
+	public static void main(String[] args) {
+		
+		int[][] matrise = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+		skrivUt(speile(matrise));
+	}
 	
 	}
 
